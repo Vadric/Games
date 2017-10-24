@@ -1,0 +1,78 @@
+// ########## Basics ##########
+author					= "Group name eg FoxForce";
+onLoadName				= "Template Mission name";
+onLoadMission			= "Template Mission phrase";
+//loadScreen	 			= "img\foxpatch.paa";
+overviewText			= "Template Mission lobby name";
+//overviewPicture			= "img\foxpatch.paa";
+onLoadIntroTime			= 1; //show time and date while intro loads
+onLoadMissionTime		= 1; //show time and date while mission loads
+onLoadIntro 			="intro load message";
+
+class Header
+{
+	gameType				= COOP;
+	minPlayers				= 1;
+	maxPlayers				= 40;
+	playerCountMultipleOf	= 1;
+};
+
+// ########## Misc ##########
+saving					= 0; 
+enableTeamSwitch		= 0;
+disabledAI				= 1;
+joinUnassigned			= 1; 
+enableItemsDropping		= 0; 
+aiKills					= 0;
+enableDebugConsole		= 1;
+allowFunctionsLog		= 0;
+allowFunctionsRecompile	= 0;
+skiplobby               = 0; //skip role selection
+disableChannels[]		={0, 2, 4, 5, 6};// 0 = Global 1 = Side 2 = Command 3 = Group 4 = Vehicle 5 = Direct 6 = System
+
+showHUD[] = 
+{
+	true,	// Scripted HUD (same as showHUD command)
+	true,	// Vehicle + soldier info
+	true,	// Vehicle radar [HIDDEN]
+	true,	// Vehicle compass [HIDDEN]
+	true,	// Tank direction indicator
+	true,	// Commanding menu
+	false,	// Group Bar
+	true	// HUD Weapon Cursors (and scroll menu)
+};
+
+
+
+
+// ########## Respawning ##########
+respawn					= 3;
+respawnDelay			= 3; //wait time after death
+respawnDialog			= 0;
+respawnOnStart			= 0;
+respawnButton 			= 1;
+
+// ########## Params ##########
+
+
+// ########## Functions ##########
+class CfgFunctions
+{
+	#include "func\functions.hpp"
+};
+
+//########Ending######## //use// endMission "FoxEnd";
+/*
+class CfgDebriefing
+{  
+	class FoxEnd
+	{
+		title = "Airfield Secure";
+		subtitle = "Mission Complete";
+		description = "The Island has been made great again. Karkax was court-martialed for contraband.";
+		pictureBackground = "";
+		picture = "";
+		//pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
+*/

@@ -1,0 +1,62 @@
+start: > a1 a2 a3 
+
+a1> Lb1 Lb3 N1 Abdulaziz al-Omari 
+
+a2> Ib2 Fayez Banihammad 
+
+a3> Lb3 N1 Ahmed al-Ghamdi 
+
+b1> Ic1 Hani Hanjour 
+
+b2> Lc2 Ia1 Ia3 Ib1 Ib3 N2 Khalid al-Mihdhar 	
+
+b3> Ic3 N2 Majed Moqed 
+
+c1> Ld1 La3 Ib3 Ic2 N3 Wail al-Shehri 	
+
+c2> Id2 Ia2  Salem al-Hazmi 
+
+c3> Ld3 Lb1 N3 Ziad Jarrah 
+
+d1>Satam al-Suqami 	
+
+d2>Ahmed al-Nami 
+
+d3>Saeed al-Ghamdi 
+
+end: Mohamed Atta 
+
+I = informant
+L= documents
+
+
+Wail al-Shehri 	
+Waleed al-Shehri 		
+Marwan al-Shehhi 		
+Mohand al-Shehri 				
+Ahmed al-Haznawi 	
+
+
+a1: Hani Hanjour, Majed Moqed, shipments to Shuhada storage yard.
+
+a2: All I know is a guys named Khalid al-Mihdhar, may satan eat your balls 
+
+a3: Majed Moqed, shipments to Shuhada storage yard.
+
+b1: My cousins name is Wail al-Shehri, American scum.
+
+b2: docs: Salem al-Hazmi, Shipments to the Mizla military base. / informant: Don't hurt me! I know of Abdulaziz al-Omari, Ahmed al-Ghamdi, Hani Hanjour and Majed Moqed.
+
+b3: Ziad Jarrah has been making shipments to Mizla military base, pig fucker.
+
+c1: docs: Satam al-Suqami, Ahmed al-Ghamdi, High tech truck parked close by. / Informant: Majed Moqed and Salem al-Hazmi will avenge me!
+
+c2: Ahmed al-Nami and Fayez Banihammad are my brothers in martyrdom.
+
+c3: Saeed al-Ghamdi, Hani Hanjour, High tech truck parked close by.
+
+d1:Mohamed Atta is all.
+
+d2:Mohamed Atta 
+
+d3:Mohamed Atta 

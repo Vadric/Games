@@ -1,0 +1,8 @@
+EOD: B_soldier_exp_F
+Normal Meidc: B_medic_F
+JTAC: B_recon_JTAC_F
+Driver: B_Soldier_F
+Document spec: B_Story_SF_Captain_F
+Lingust: B_Story_Protagonist_F
+HUMINT: B_CTRG_soldier_GL_LAT_F
+Nuke guy: B_engineer_F

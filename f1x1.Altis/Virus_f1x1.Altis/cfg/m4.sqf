@@ -1,0 +1,60 @@
+//null = [this] execVM "cfg\m4.sqf";
+if (!isServer) exitwith {};
+this = (_this select 0);
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "rhs_uniform_FROG01_wd";
+this addItemToUniform "RyanZombiesAntiVirusTemporary_Item";
+for "_i" from 1 to 20 do {this addItemToUniform "ACE_fieldDressing";};
+this addItemToUniform "ACE_EarPlugs";
+this addItemToUniform "ACE_epinephrine";
+this addItemToUniform "ACE_Flashlight_XL50";
+for "_i" from 1 to 10 do {this addItemToUniform "ACE_morphine";};
+this addVest "rhsusf_spc_rifleman";
+this addItemToVest "rhs_mag_an_m8hc";
+for "_i" from 1 to 2 do {this addItemToVest "rhs_mag_m67";};
+for "_i" from 1 to 12 do {this addItemToVest "rhs_mag_30Rnd_556x45_Mk262_Stanag";};
+this addBackpack "VSM_Multicam_Backpack_Kitbag";
+this addItemToBackpack "ACE_Clacker";
+for "_i" from 1 to 3 do {this addItemToBackpack "ACE_bloodIV";};
+for "_i" from 1 to 2 do {this addItemToBackpack "ACE_CableTie";};
+this addItemToBackpack "ACE_DefusalKit";
+for "_i" from 1 to 3 do {this addItemToBackpack "ACE_epinephrine";};
+for "_i" from 1 to 3 do {this addItemToBackpack "ACE_IR_Strobe_Item";};
+this addItemToBackpack "ACE_wirecutter";
+this addItemToBackpack "ACE_EntrenchingTool";
+for "_i" from 1 to 4 do {this addItemToBackpack "ClaymoreDirectionalMine_Remote_Mag";};
+for "_i" from 1 to 4 do {this addItemToBackpack "APERSTripMine_Wire_Mag";};
+this addItemToBackpack "DemoCharge_Remote_Mag";
+for "_i" from 1 to 2 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_Mk262_Stanag";};
+this addHeadgear "rhsusf_lwh_helmet_marpatwd";
+this addGoggles "rhs_googles_clear";
+
+comment "Add weapons";
+this addWeapon "rhs_weap_m4a1_blockII_d";
+this addPrimaryWeaponItem "rhsusf_acc_anpeq15_wmx_light";
+this addPrimaryWeaponItem "rhsusf_acc_SpecterDR_A";
+this addPrimaryWeaponItem "rhsusf_acc_grip3";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "tf_anprc152";
+this linkItem "ItemGPS";
+this linkItem "TRYK_Headphone_NV";
+
+comment "Set identity";
+this setSpeaker "male03eng";
+sleep .1;

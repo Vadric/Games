@@ -1,0 +1,132 @@
+// ########## Basics ##########
+author					= "A Jungle Lovin' Fox";
+onLoadName				= "Charlies Angry";
+onLoadMission			= "The trees are moving";
+//loadScreen	 			= "img\foxpatch.paa";
+overviewText			= "Charlies Angry";
+overviewPicture			= "img\charlie.paa";
+onLoadIntroTime			= 1; //show time and date while intro loads
+onLoadMissionTime		= 1; //show time and date while mission loads
+onLoadIntro 			="Charlies Angry";
+
+class Header
+{
+	gameType				= COOP;
+	minPlayers				= 1;
+	maxPlayers				= 40;
+	playerCountMultipleOf	= 1;
+};
+
+// ########## Misc ##########
+saving					= 0; 
+enableTeamSwitch		= 0;
+disabledAI				= 1;
+joinUnassigned			= 1; 
+enableItemsDropping		= 0; 
+aiKills					= 0;
+enableDebugConsole		= 1;
+allowFunctionsLog		= 0;
+allowFunctionsRecompile	= 0;
+skiplobby               = 0; //skip role selection
+disableChannels[]		={0, 2, 4, 5, 6};// 0 = Global 1 = Side 2 = Command 3 = Group 4 = Vehicle 5 = Direct 6 = System
+
+showHUD[] = 
+{
+	true,	// Scripted HUD (same as showHUD command)
+	true,	// Vehicle + soldier info
+	true,	// Vehicle radar [HIDDEN]
+	true,	// Vehicle compass [HIDDEN]
+	true,	// Tank direction indicator
+	true,	// Commanding menu
+	false,	// Group Bar
+	true	// HUD Weapon Cursors (and scroll menu)
+};
+
+
+
+
+// ########## Respawning ##########
+respawn					= 3;
+respawnDelay			= 3; //wait time after death
+respawnDialog			= 0;
+respawnOnStart			= 0;
+respawnButton 			= 1;
+
+// ########## Params ##########
+class Params
+{
+	#include "cfg\mission_params.hpp"
+};
+
+// ########## Cleanup ##########
+corpseManagerMode		= 0;
+corpseLimit				= 15;
+corpseRemovalMinTime	= 600;
+corpseRemovalMaxTime	= 900;
+
+wreckManagerMode		= 0;
+wreckLimit				= 5;
+wreckRemovalMinTime		= 600;
+wreckRemovalMaxTime		= 900;
+
+// ########## Includes ##########
+#include "src\ATM_airdrop\dialog.hpp" //paradrop
+#include "src\CHVD\dialog.hpp"
+#include "src\VVS\menu.h"
+
+
+// ########## Functions ##########
+class CfgFunctions
+{
+	#include "func\scenes.hpp"
+	#include "src\CHVD\CfgFunctions.hpp"
+	#include "src\FETT_ZeusShare\CfgFunctions.hpp"
+	#include "func\functions.hpp"
+	#include "src\VVS\Functions.h"
+};
+
+class CfgSounds
+{
+	sounds[] = {Vent, Vent2, Para, Reveille};
+	
+	class Vent
+	{
+		name		= "Vent";
+		sound[]		= {"src\ATM_airdrop\data\Vent.ogg", db-11, 1.0};
+		titles[]	= {};
+	};
+	class Vent2
+	{
+		name		= "Vent2";
+		sound[]		= {"src\ATM_airdrop\data\Vent2.ogg", db-11, 1.0};
+		titles[]	= {};
+	};
+	class Para
+	{
+		name		= "Para";
+		sound[]		= {"src\ATM_airdrop\data\parachute.ogg", db-11, 1.0};
+		titles[]	= {};
+	};
+
+};
+
+// ######## ACE ######### 
+class ACE_Settings
+{
+	#include "cfg\ace_settings.hpp" 
+};
+
+//########Ending######## //use// endMission "FoxEnd";
+
+class CfgDebriefing
+{  
+	class FoxEnd
+	{
+		title = "Rebels Destroyed";
+		subtitle = "Mission Complete";
+		description = "The Island has been made great again.";
+		pictureBackground = "img\charlie.paa";
+		picture = "\ff7_base\data\camo_fox_cavalry.paa";
+		//pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};

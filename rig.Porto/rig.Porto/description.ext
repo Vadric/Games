@@ -1,0 +1,67 @@
+// ########## Basics ##########
+author					= "Fox Navy";
+onLoadName				= "Rig";
+onLoadMission			= "Rig";
+overviewText			= "Rig";
+onLoadIntroTime			= 0;
+onLoadMissionTime		= 0;
+
+class Header
+{
+	gameType	= COOP;
+	minPlayers	= 1;
+	maxPlayers	= 26;
+};
+
+
+// ########## Misc ##########
+saving					= 0;
+enableTeamSwitch		= 0;
+disabledAI				= 1;
+joinUnassigned			= 1;
+enableItemsDropping		= 0;
+disableChannels[]		= {0,2,3,4,5,6};
+aiKills					= 0;
+enableDebugConsole		= 1;
+allowFunctionsLog		= 0;
+allowFunctionsRecompile	= 0;
+
+
+// ########## Respawning ##########
+respawn					= 3;
+respawnDelay			= 3;
+respawnDialog			= 0;
+respawnOnStart			= 0;
+
+
+// ########## Cleanup ##########
+corpseManagerMode		= 0;
+corpseLimit				= 15;
+corpseRemovalMinTime	= 600;
+corpseRemovalMaxTime	= 900;
+
+wreckManagerMode		= 0;
+wreckLimit				= 5;
+wreckRemovalMinTime		= 600;
+wreckRemovalMaxTime		= 900;
+
+
+// ######## ACE #########
+class ACE_Settings
+{
+	class ace_respawn_savePreDeathGear
+	{
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+};
+
+// ########## Functions ##########
+class CfgFunctions
+{
+	#include "func\functions.hpp"
+};
+
+
+
