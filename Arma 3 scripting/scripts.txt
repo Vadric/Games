@@ -1,0 +1,150 @@
+//ROTATE
+_y = 0; _p = 180; _r = 0;
+_lightjos setVectorDirAndUp [
+	[ sin _y * cos _p,cos _y * cos _p,sin _p],
+	[ [ sin _r,-sin _p,cos _r * cos _p],-_y] call BIS_fnc_rotateVector2D
+];
+
+
+//change static ammo and gun
+_gun = [t11,t10];
+{
+_x removeWeaponTurret [((_x weaponsTurret [0])select 0),[0]];
+_x addMagazineTurret ["2000Rnd_65x39_Belt_Tracer_Green_Splash",[0]];
+_x addWeaponTurret ["LMG_Minigun_Transport",[0]];
+_x addeventhandler ["fired", {_x setvehicleammo 1}];
+} foreach _gun;
+
+//add a mix of ammo/gun types
+_mags = [
+"100Rnd_127x99_mag_Tracer_Green"
+];
+_weps = [
+"HMG_M2"
+];
+_gun = [_t1,_t2];
+{_x removeWeaponTurret [((_x weaponsTurret [0])select 0),[0]];_gunx = _x;{_gunx addWeaponTurret [_x,[0]];}foreach _weps;{_gunx addMagazineTurret [_x,[0]];}foreach _mags;} foreach _gun;
+
+//ace remove move
+[_x, false] call ace_dragging_fnc_setDraggable;
+[_x, false] call ace_dragging_fnc_setCarryable;
+_x setVariable ["ace_cargo_canLoad", 0];
+
+//get rotaion
+copyToClipboard str [vectorDir (get3DENSelected "" select 0 select 0), vectorUp (get3DENSelected"" select 0 select 0)];
+
+//invunrable
+this allowDamage false;
+this enableFatigue false; this allowDamage false;
+
+c = crew this; {removeAllWeapons _x; _x addMagazine "30Rnd_556x45_Stanag"; _x addWeapon "M4A1"; }foreach c;
+
+//remove civilian hat
+this setVariable ["BIS_enableRandomization", false];
+
+//stop civ running 
+This disableAI "MOVE"; This setBehaviour "Carreless";
+
+//no fatigue
+this enableFatigue false; 
+
+//virtual arsenal
+["AmmoboxInit",[this,true]] call BIS_fnc_arsenal;
+
+//full arsenal
+this addAction ["Open Virtual Arsenal", {["Open",true] spawn BIS_fnc_arsenal}];
+
+//add weapon and ammo to ammo box
+ClearWeaponCargo this; ClearMagazineCargo this; 
+this addweaponcargo ["LMG_Zafir_F",2]; this addmagazinecargo ["150Rnd_762x54_Box_Tracer",100];
+
+//add ammo to weapons box
+ClearWeaponCargo this; ClearMagazineCargo this; 
+this addmagazinecargo ["150Rnd_762x54_Box_Tracer",100];
+
+// disable units radio
+enableRadio false
+
+// make unit stand (middle, down are other positions) / stop unit running around
+this setUnitPos "UP"; this allowfleeing 0;
+
+// make object level
+_this setVectorUp [0,0,1];
+
+//lower elevation
+this setPos [ getPos this select 0, getPos this select 1, -3]
+
+//unlimited ammo, no reloading
+this addeventhandler ["fired", {(_this select 0) setvehicleammo 1}]
+
+//unlimited ammo, reloading but have to name weapon
+this addeventhandler ["Fired",{if (_this select 1=="Strela") then {_this select 0 addMagazine (_this select 5)}}] 
+this addeventhandler ["Fired",{if ((_count (_this select 0) ammo (_this select 5))<1) then {_this select 0 addMagazine (_this select 5)}}] 
+
+//make civilian hostile
+civilian setFriend [blufor, 0];
+// Sets blufor hostile towards civilians
+blufor setFriend [civilian, 0];
+
+//unload a boat and crew
+deleteVehicle (driver boat1);deleteVehicle (gunner boat1);{unassignVehicle _x ; _x action ["Eject",  boat1]} forEach (assignedCargo boat1 + crew boat1);  boat1 engineOn false;
+
+deleteVehicle (gunner boat4);deleteVehicle (driver boat4); {_x action ["Eject", boat4];} forEach assignedcargo boat4 + crew boat4;  boat4 engineOn false; 
+
+//trigger for boats
+this && ({ _x in thislist} count [boat1,boat2,boat3,boat4,boat5,boat6] > 0)  
+
+//give speed boost to land boat
+if (isServer) then  {   _vel = velocity _vehicle;   _dir = direction _vehicle;   _speed = 10;   _vehicle setVelocity [(_vel select 0)+(sin _dir*_speed),(_vel select 1)+ (cos _dir*_speed),(_vel select 2)]};
+
+//boat test
+unit disableAI "WAYPOINT_STOP"
+
+//use a game logic on one building to hide it 
+(nearestObject [this,"building"]) hideObject true;
+
+// use a helipad to make all buildings invisable within range
+{if (_x isKindOf "building") then {_x hideObject true}} forEach nearestObjects [this,[],200];
+
+//lots of individual hides
+
+{if (_x isKindOf "Land_i_House_Big_01_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_House_Big_02_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_House_Small_01_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_House_Small_03_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_Shop_01_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_Shop_02_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_Stone_HouseBig_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_Stone_HouseSmall_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_Stone_Shed_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_Stone_Shed_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_u_Addon_01_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_u_Addon_02_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_u_House_Small_01_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_u_House_Small_02_V1_F") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_hospital_side1_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_hospital_main_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_hospital_side2_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_u_shop_02_v1_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_shop_02_v2_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_house_small_02_v2_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_offices_01_v1_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],400];
+{if (_x isKindOf "Land_wip_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_garage_v1_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_chapel_v1_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_belltower_02_v1_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_unfinished_building_01_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_unfinished_building_02_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_kiosk_redburger_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_kiosk_bluekingr_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_i_shed_ind_f") then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+//walls not working
+{if (_x isKindOf "Land_City2_4m_F") then {_x hideObject true}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_City_8m_F") then {_x hideObject true}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_City_Pillar_F") then {_x hideObject true}} forEach nearestObjects [this,[],200];
+{if (_x isKindOf "Land_City2_8m_F") then {_x hideObject true}} forEach nearestObjects [this,[],200];
+
+//test
+{if ((typeOf _x) in ["Land_i_House_Big_01_V1_F","Land_i_House_Big_02_V1_F","Land_i_House_Small_01_V1_F","Land_i_House_Small_03_V1_F","Land_i_Shop_01_V1_F","Land_i_Shop_02_V1_F","Land_i_Stone_HouseBig_V1_F","Land_i_Stone_HouseSmall_V1_F" ,"Land_i_Stone_Shed_V1_F" ,"Land_i_Stone_Shed_V1_F" ,"Land_u_Addon_01_V1_F" ,"Land_u_Addon_02_V1_F" ,"Land_u_House_Small_01_V1_F" ,"Land_u_House_Small_02_V1_F" ,"Land_hospital_side1_f" ,"Land_hospital_main_f" ,"Land_hospital_side2_f" ,"Land_u_shop_02_v1_f" ,"Land_i_shop_02_v2_f" ,"Land_i_house_small_02_v2_f" ,"Land_offices_01_v1_f","Land_wip_f" ,"Land_i_garage_v1_f" ,"Land_chapel_v1_f" ,"Land_belltower_02_v1_f" ,"Land_unfinished_building_01_f" ,"Land_unfinished_building_02_f" ,"Land_kiosk_redburger_f" ,"Land_kiosk_bluekingr_f" ,"Land_i_shed_ind_f" ] ) then {_x hideObject true;_x allowDamage False}} forEach nearestObjects [this,[],200];
+
+//barracks building positions: 34/35/36 balcony, 28/30/32, other side top, roof from ladder: 47/45far left, 46/44 far right,40/39 close left, 42/41 close right, 43 middle left. bottom from ladder: close left 49, middle left 6, far left 9, close right 15, middle right 14, far right 12.

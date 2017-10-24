@@ -1,0 +1,4 @@
+class cfgFunctions
+{
+#include "func\scenes.hpp"
+};

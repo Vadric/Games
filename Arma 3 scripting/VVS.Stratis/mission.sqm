@@ -1,0 +1,825 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=129;
+	class ItemIDProvider
+	{
+		nextID=48;
+	};
+	class MarkerIDProvider
+	{
+		nextID=8;
+	};
+	class Camera
+	{
+		pos[]={1632.3542,18.998945,5660.6538};
+		dir[]={-0.58787203,-0.71725965,0.37414131};
+		up[]={-0.60510486,0.69680536,0.38510957};
+		aside[]={0.53692782,6.8928057e-007,0.84365112};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Ui_F",
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Misc_F_Helpers",
+	"A3_Characters_F",
+	"ace_explosives"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=5;
+		class Item0
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Misc_F";
+			name="Arma 3 - 3D Aids and Helpers";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+	};
+};
+randomSeed=7977181;
+class ScenarioData
+{
+	author="Vad";
+};
+class Intro
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="Virtual Vehicle Spawner (VVS) 0.4.1";
+		startWeather=0.29999998;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.29999998;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Entities
+	{
+		items=32;
+		class Item0
+		{
+			dataType="Marker";
+			position[]={1669.9613,5.5,5659.9189};
+			name="VVS_car_1";
+			text="Car Depot";
+			type="c_car";
+			colorName="ColorBLUFOR";
+			angle=279.74567;
+			id=5;
+		};
+		class Item1
+		{
+			dataType="Marker";
+			position[]={1673.5682,5.5,5674.6606};
+			name="VVS_air_1";
+			text="Air Depot";
+			type="c_air";
+			colorName="ColorBLUFOR";
+			angle=279.74567;
+			id=6;
+		};
+		class Item2
+		{
+			dataType="Marker";
+			position[]={1685.5554,5.5,5655.9199};
+			name="VVS_tank_1";
+			text="Tank Depot";
+			type="b_armor";
+			colorName="ColorBLUFOR";
+			angle=103.307;
+			id=7;
+		};
+		class Item3
+		{
+			dataType="Marker";
+			position[]={1618.6982,-0.00061415916,5661.4785};
+			name="VVS_ship_1";
+			text="Ship Depot";
+			type="n_naval";
+			colorName="ColorBLUFOR";
+			angle=286.24826;
+			id=8;
+			atlOffset=0.79702991;
+		};
+		class Item4
+		{
+			dataType="Marker";
+			position[]={1704.3239,5.5,5667.8896};
+			name="VVS_all_1";
+			text="All";
+			type="hd_warning";
+			angle=15.128325;
+			id=9;
+		};
+		class Item5
+		{
+			dataType="Marker";
+			position[]={1689.4165,5.5,5671.5654};
+			name="VVS_Support_1";
+			text="Support Depot";
+			type="b_armor";
+			angle=189.15097;
+			id=10;
+		};
+		class Item6
+		{
+			dataType="Marker";
+			position[]={1700.9565,5.5,5653.1431};
+			name="VVS_Autonomous_1";
+			text="Autonomous Depot";
+			type="b_mech_inf";
+			angle=103.307;
+			id=11;
+		};
+		class Item7
+		{
+			dataType="Marker";
+			position[]={1680.7844,5.5,5635.0615};
+			name="BASE";
+			type="Empty";
+			id=12;
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1670.446,5.5,5660.5088};
+				angles[]={-0,3.3757877,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=13;
+			type="Land_HelipadSquare_F";
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1674.053,5.5,5675.2505};
+				angles[]={-0,3.3757877,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=14;
+			type="Land_HelipadSquare_F";
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1686.04,5.5,5656.5098};
+				angles[]={-0,3.3757877,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=15;
+			type="Land_HelipadSquare_F";
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1704.5897,5.5,5667.9102};
+				angles[]={-0,3.3496854,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=16;
+			type="Land_HelipadSquare_F";
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1689.8182,5.5,5671.6167};
+				angles[]={-0,3.3757877,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=17;
+			type="Land_HelipadSquare_F";
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1701.0824,5.5,5652.8198};
+				angles[]={-0,3.3757877,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=18;
+			type="Land_HelipadSquare_F";
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1673.84,8.8732605,5653.3193};
+				angles[]={-0,3.3729887,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				createAsSimpleObject=1;
+			};
+			id=19;
+			type="Sign_Arrow_Green_F";
+			atlOffset=3;
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1677.7633,8.8732605,5668.2329};
+				angles[]={-0,3.3729887,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				createAsSimpleObject=1;
+			};
+			id=20;
+			type="Sign_Arrow_Green_F";
+			atlOffset=3;
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1693.0991,8.8732605,5664.4893};
+				angles[]={-0,3.3729887,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				createAsSimpleObject=1;
+			};
+			id=21;
+			type="Sign_Arrow_Green_F";
+			atlOffset=3;
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1707.8406,8.8732605,5660.5088};
+				angles[]={-0,3.3729887,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				createAsSimpleObject=1;
+			};
+			id=22;
+			type="Sign_Arrow_Green_F";
+			atlOffset=3;
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1704.2148,8.8732605,5645.5952};
+				angles[]={-0,3.3729887,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				createAsSimpleObject=1;
+			};
+			id=23;
+			type="Sign_Arrow_Green_F";
+			atlOffset=3;
+		};
+		class Item19
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1689.6516,8.8732605,5649.5757};
+				angles[]={-0,3.3729887,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				createAsSimpleObject=1;
+			};
+			id=24;
+			type="Sign_Arrow_Green_F";
+			atlOffset=3;
+		};
+		class Item20
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1656.8265,8.8091707,5651.1143};
+				angles[]={6.268187,3.3729887,0.034984674};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				createAsSimpleObject=1;
+			};
+			id=25;
+			type="Sign_Arrow_Green_F";
+			atlOffset=3.0002675;
+		};
+		class Item21
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1673.8698,5.5014391,5653.4268};
+						angles[]={-0,3.4054346,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_car_1"",""Car""]];";
+					};
+					id=27;
+					type="B_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=26;
+		};
+		class Item22
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1676.1437,5.5014391,5641.5151};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=29;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=28;
+		};
+		class Item23
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1677.7106,5.5014391,5668.168};
+						angles[]={-0,3.4054346,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_air_1"",""Air""]];";
+					};
+					id=31;
+					type="B_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=30;
+		};
+		class Item24
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1689.361,5.5014391,5649.6431};
+						angles[]={-0,3.3729887,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_tank_1"",""Armored""]];";
+					};
+					id=33;
+					type="B_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=32;
+		};
+		class Item25
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1656.4254,5.4233651,5651.1855};
+						angles[]={6.268187,1.9125519,0.034984674};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_ship_1"",""Ship""]];";
+					};
+					id=35;
+					type="B_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=34;
+		};
+		class Item26
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1707.8215,5.5014391,5661.0386};
+						angles[]={-0,3.3668165,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_all_1"",""All""]];";
+					};
+					id=37;
+					type="B_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=36;
+		};
+		class Item27
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1693.1392,5.5014391,5664.75};
+						angles[]={-0,3.3729887,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_Support_1"",""Support""]];";
+					};
+					id=39;
+					type="B_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=38;
+		};
+		class Item28
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1704.4033,5.5014391,5645.9531};
+						angles[]={-0,3.3729887,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_Autonomous_1"",""Autonomous""]];";
+					};
+					id=41;
+					type="B_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=40;
+		};
+		class Item29
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1680.4225,5.5014391,5640.4458};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						isPlayable=1;
+					};
+					id=43;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=42;
+		};
+		class Item30
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1684.3599,5.5014391,5639.5361};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						isPlayable=1;
+					};
+					id=45;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=44;
+		};
+		class Item31
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1687.8435,5.5014391,5638.4585};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						isPlayable=1;
+					};
+					id=47;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=46;
+		};
+	};
+};
+class OutroLoose
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroWin
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};

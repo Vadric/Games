@@ -1,0 +1,883 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=186;
+	};
+	class Camera
+	{
+		pos[]={4149.5742,1098.9542,3719.5806};
+		dir[]={-0.0068393541,-0.98572922,0.16880104};
+		up[]={-0.039903976,0.16870926,0.98486048};
+		aside[]={0.99928486,-8.4322528e-007,0.04048726};
+	};
+};
+binarizationWanted=0;
+class AddonsMetaData
+{
+};
+randomSeed=7720467;
+class ScenarioData
+{
+	author="Vad";
+};
+class Intro
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Entities
+	{
+		items=44;
+		class Item0
+		{
+			dataType="Trigger";
+			position[]={4088.0591,5,3914.417};
+			angle=4.6963296;
+			class Attributes
+			{
+				name="Scene_boundry";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene0""] call mytag_fnc_savescene; [""MyScene0"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=13;
+			type="EmptyDetector";
+		};
+		class Item1
+		{
+			dataType="Trigger";
+			position[]={4089.1951,5,3916.8721};
+			angle=4.6963315;
+			class Attributes
+			{
+				name="scenetrigger";
+				condition="this && time > 2";
+				onActivation="[""MyScene0"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene0"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=14;
+			type="EmptyDetector";
+		};
+		class Item2
+		{
+			dataType="Trigger";
+			position[]={4225.064,5,3921.5491};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_1";
+				condition="this && time > 2";
+				onActivation="[""MyScene1"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene1"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=32;
+			type="EmptyDetector";
+		};
+		class Item3
+		{
+			dataType="Trigger";
+			position[]={4226.2969,5,3923.9561};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_1";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene1""] call mytag_fnc_savescene; [""MyScene1"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=31;
+			type="EmptyDetector";
+		};
+		class Item4
+		{
+			dataType="Trigger";
+			position[]={4080.8479,5,4049.3989};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_2";
+				condition="this && time > 2";
+				onActivation="[""MyScene2"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene2"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=45;
+			type="EmptyDetector";
+		};
+		class Item5
+		{
+			dataType="Trigger";
+			position[]={4086.1741,5,4054.3291};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_2";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene2""] call mytag_fnc_savescene; [""MyScene2"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=46;
+			type="EmptyDetector";
+		};
+		class Item6
+		{
+			dataType="Trigger";
+			position[]={4240.9751,5,4048.6421};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_3";
+				condition="this && time > 2";
+				onActivation="[""MyScene3"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene3"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=47;
+			type="EmptyDetector";
+		};
+		class Item7
+		{
+			dataType="Trigger";
+			position[]={4246.8184,5,4056.3567};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_3";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene3""] call mytag_fnc_savescene; [""MyScene3"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=48;
+			type="EmptyDetector";
+		};
+		class Item8
+		{
+			dataType="Trigger";
+			position[]={4077.9351,5,4204.4761};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_4";
+				condition="this && time > 2";
+				onActivation="[""MyScene4"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene4"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=49;
+			type="EmptyDetector";
+		};
+		class Item9
+		{
+			dataType="Trigger";
+			position[]={4083.689,5,4212.1328};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_4";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene4""] call mytag_fnc_savescene; [""MyScene4"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=50;
+			type="EmptyDetector";
+		};
+		class Item10
+		{
+			dataType="Trigger";
+			position[]={4238.5059,5,4208.978};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_5";
+				condition="this && time > 2";
+				onActivation="[""MyScene5"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene5"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=51;
+			type="EmptyDetector";
+		};
+		class Item11
+		{
+			dataType="Trigger";
+			position[]={4247.3901,5,4216.3369};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_5";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene5""] call mytag_fnc_savescene; [""MyScene5"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=52;
+			type="EmptyDetector";
+		};
+		class Item12
+		{
+			dataType="Trigger";
+			position[]={4076.072,5,4367.2969};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_6";
+				condition="this && time > 2";
+				onActivation="[""MyScene6"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene6"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=53;
+			type="EmptyDetector";
+		};
+		class Item13
+		{
+			dataType="Trigger";
+			position[]={4084.8999,5,4374.7002};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_6";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene6""] call mytag_fnc_savescene; [""MyScene6"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=54;
+			type="EmptyDetector";
+		};
+		class Item14
+		{
+			dataType="Trigger";
+			position[]={4239.9229,5,4367.0781};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_7";
+				condition="this && time > 2";
+				onActivation="[""MyScene7"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene7"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=55;
+			type="EmptyDetector";
+		};
+		class Item15
+		{
+			dataType="Trigger";
+			position[]={4246.1079,5,4376.3408};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_7";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene7""] call mytag_fnc_savescene; [""MyScene7"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=56;
+			type="EmptyDetector";
+		};
+		class Item16
+		{
+			dataType="Trigger";
+			position[]={4077.5869,5,4527.4331};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_8";
+				condition="this && time > 2";
+				onActivation="[""MyScene8"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene8"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=57;
+			type="EmptyDetector";
+		};
+		class Item17
+		{
+			dataType="Trigger";
+			position[]={4082.9341,5,4537.6011};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_8";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene8""] call mytag_fnc_savescene; [""MyScene8"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=58;
+			type="EmptyDetector";
+		};
+		class Item18
+		{
+			dataType="Trigger";
+			position[]={4237.127,5,4525.5562};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_9";
+				condition="this && time > 2";
+				onActivation="[""MyScene9"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene9"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=59;
+			type="EmptyDetector";
+		};
+		class Item19
+		{
+			dataType="Trigger";
+			position[]={4247.75,5,4536.5029};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_9";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene9""] call mytag_fnc_savescene; [""MyScene9"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=60;
+			type="EmptyDetector";
+		};
+		class Item20
+		{
+			dataType="Trigger";
+			position[]={4079.291,5,4657.4341};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_10";
+				condition="this && time > 2";
+				onActivation="[""MyScene10"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene10"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=61;
+			type="EmptyDetector";
+		};
+		class Item21
+		{
+			dataType="Trigger";
+			position[]={4092.5439,5,4668.2959};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_10";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene10""] call mytag_fnc_savescene; [""MyScene10"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=62;
+			type="EmptyDetector";
+		};
+		class Item22
+		{
+			dataType="Trigger";
+			position[]={4237.0181,5,4657.7681};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_11";
+				condition="this && time > 2";
+				onActivation="[""MyScene11"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene11"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=63;
+			type="EmptyDetector";
+		};
+		class Item23
+		{
+			dataType="Trigger";
+			position[]={4244.0361,5,4664.1128};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_11";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene11""] call mytag_fnc_savescene; [""MyScene11"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=64;
+			type="EmptyDetector";
+		};
+		class Item24
+		{
+			dataType="Trigger";
+			position[]={4078.1001,5,4785.1938};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_12";
+				condition="this && time > 2";
+				onActivation="[""MyScene12"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene12"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=65;
+			type="EmptyDetector";
+		};
+		class Item25
+		{
+			dataType="Trigger";
+			position[]={4083.8811,5,4794.5122};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_12";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene12""] call mytag_fnc_savescene; [""MyScene12"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=66;
+			type="EmptyDetector";
+		};
+		class Item26
+		{
+			dataType="Trigger";
+			position[]={4238.0029,5,4784.6182};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_13";
+				condition="this && time > 2";
+				onActivation="[""MyScene13"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene13"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=67;
+			type="EmptyDetector";
+		};
+		class Item27
+		{
+			dataType="Trigger";
+			position[]={4244.9111,5,4795.3628};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_13";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene13""] call mytag_fnc_savescene; [""MyScene13"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=68;
+			type="EmptyDetector";
+		};
+		class Item28
+		{
+			dataType="Trigger";
+			position[]={4078.488,5,4944.7871};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_14";
+				condition="this && time > 2";
+				onActivation="[""MyScene14"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene14"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=69;
+			type="EmptyDetector";
+		};
+		class Item29
+		{
+			dataType="Trigger";
+			position[]={4087.542,5,4957.3218};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_14";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene14""] call mytag_fnc_savescene; [""MyScene14"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=70;
+			type="EmptyDetector";
+		};
+		class Item30
+		{
+			dataType="Trigger";
+			position[]={4241.5,5,4945.7109};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_15";
+				condition="this && time > 2";
+				onActivation="[""MyScene15"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene15"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=71;
+			type="EmptyDetector";
+		};
+		class Item31
+		{
+			dataType="Trigger";
+			position[]={4245.938,5,4953.3491};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_15";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene15""] call mytag_fnc_savescene; [""MyScene15"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=72;
+			type="EmptyDetector";
+		};
+		class Item32
+		{
+			dataType="Trigger";
+			position[]={4088.052,5,5115.4971};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_16";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene16""] call mytag_fnc_savescene; [""MyScene16"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=74;
+			type="EmptyDetector";
+		};
+		class Item33
+		{
+			dataType="Trigger";
+			position[]={4240.6001,5,5105.0962};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_17";
+				condition="this && time > 2";
+				onActivation="[""MyScene17"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene17"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=75;
+			type="EmptyDetector";
+		};
+		class Item34
+		{
+			dataType="Trigger";
+			position[]={4246.8491,5,5114.1929};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_17";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene17""] call mytag_fnc_savescene; [""MyScene17"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=76;
+			type="EmptyDetector";
+		};
+		class Item35
+		{
+			dataType="Trigger";
+			position[]={4091.4351,5,5276.3682};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_18";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene18""] call mytag_fnc_savescene; [""MyScene18"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=78;
+			type="EmptyDetector";
+		};
+		class Item36
+		{
+			dataType="Trigger";
+			position[]={4239.3999,5,5265.353};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_19";
+				condition="this && time > 2";
+				onActivation="[""MyScene19"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene19"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=79;
+			type="EmptyDetector";
+		};
+		class Item37
+		{
+			dataType="Trigger";
+			position[]={4248.4692,5,5280.5918};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_19";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene19""] call mytag_fnc_savescene; [""MyScene19"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=80;
+			type="EmptyDetector";
+		};
+		class Item38
+		{
+			dataType="Trigger";
+			position[]={4081.1211,5,5425.04};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_20";
+				condition="this && time > 2";
+				onActivation="[""MyScene20"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene20"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=81;
+			type="EmptyDetector";
+		};
+		class Item39
+		{
+			dataType="Trigger";
+			position[]={4099.498,5,5434.2451};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_20";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene20""] call mytag_fnc_savescene; [""MyScene20"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=82;
+			type="EmptyDetector";
+		};
+		class Item40
+		{
+			dataType="Trigger";
+			position[]={4240.0889,5,5425.5781};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_21";
+				condition="this && time > 2";
+				onActivation="[""MyScene21"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene21"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=83;
+			type="EmptyDetector";
+		};
+		class Item41
+		{
+			dataType="Trigger";
+			position[]={4247.2388,5,5429.2559};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="Scene_boundry_21";
+				condition="true";
+				onActivation="[thisTrigger,""MyScene21""] call mytag_fnc_savescene; [""MyScene21"",false] call mytag_fnc_deletescene";
+				sizeA=30;
+				sizeB=30;
+				sizeC=5;
+				interuptable=1;
+			};
+			id=84;
+			type="EmptyDetector";
+		};
+		class Item42
+		{
+			dataType="Trigger";
+			position[]={4079.4399,5,5263.8462};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_22";
+				condition="this && time > 2";
+				onActivation="[""MyScene18"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene18"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=162;
+			type="EmptyDetector";
+		};
+		class Item43
+		{
+			dataType="Trigger";
+			position[]={4076.7891,5,5104.7339};
+			angle=1.5948993;
+			class Attributes
+			{
+				name="scenetrigger_23";
+				condition="this && time > 2";
+				onActivation="[""MyScene16"",false] call mytag_fnc_loadscene";
+				onDeactivation="[""MyScene16"",false] call mytag_fnc_deletescene";
+				sizeC=5;
+				activationBy="WEST";
+			};
+			id=163;
+			type="EmptyDetector";
+		};
+	};
+};
+class OutroLoose
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroWin
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};

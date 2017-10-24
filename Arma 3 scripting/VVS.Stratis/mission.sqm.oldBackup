@@ -1,0 +1,553 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f_beta",
+		"A3_Structures_F_Mil_Helipads",
+		"a3_map_stratis",
+		"A3_Characters_F_OPFOR",
+		"a3_characters_f",
+		"A3_Misc_F_Helpers"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Structures_F_Mil_Helipads",
+		"A3_Misc_F_Helpers",
+		"a3_map_stratis"
+	};
+	randomSeed=7217758;
+	class Intel
+	{
+		briefingName="Virtual Vehicle Spawner (VVS) 0.4.1";
+		startWeather=0.29999998;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.29999998;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Groups
+	{
+		items=11;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1673.8698,5.5,5653.3271};
+					azimut=-524.883;
+					id=0;
+					side="WEST";
+					vehicle="B_engineer_F";
+					leader=1;
+					skill=0.60000002;
+					init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_car_1"",""Car""]];";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1676.1437,5.5,5641.4155};
+					id=1;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1677.7106,5.5,5668.0684};
+					azimut=-524.883;
+					id=2;
+					side="WEST";
+					vehicle="B_engineer_F";
+					leader=1;
+					skill=0.60000002;
+					init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_air_1"",""Air""]];";
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1689.361,5.5,5649.5435};
+					azimut=-526.742;
+					id=3;
+					side="WEST";
+					vehicle="B_engineer_F";
+					leader=1;
+					skill=0.60000002;
+					init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_tank_1"",""Armored""]];";
+				};
+			};
+		};
+		class Item4
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1656.4254,5.4211788,5651.0859};
+					azimut=-610.41888;
+					id=4;
+					side="WEST";
+					vehicle="B_engineer_F";
+					leader=1;
+					skill=0.60000002;
+					init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_ship_1"",""Ship""]];";
+				};
+			};
+		};
+		class Item5
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1707.8215,5.5,5660.939};
+					azimut=-527.09564;
+					id=5;
+					side="WEST";
+					vehicle="B_engineer_F";
+					leader=1;
+					skill=0.60000002;
+					init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_all_1"",""All""]];";
+				};
+			};
+		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1693.1392,5.5,5664.6504};
+					azimut=-526.742;
+					id=6;
+					side="WEST";
+					vehicle="B_engineer_F";
+					leader=1;
+					skill=0.60000002;
+					init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_Support_1"",""Support""]];";
+				};
+			};
+		};
+		class Item7
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1704.4033,5.5,5645.8535};
+					azimut=-526.742;
+					id=7;
+					side="WEST";
+					vehicle="B_engineer_F";
+					leader=1;
+					skill=0.60000002;
+					init="removeallWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Virtual Vehicle Spawner"",VVS_fnc_openVVS,[""VVS_Autonomous_1"",""Autonomous""]];";
+				};
+			};
+		};
+		class Item8
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1680.4225,5.5,5640.3462};
+					id=8;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item9
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1684.3599,5.5,5639.4365};
+					id=9;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item10
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1687.8435,5.5,5638.3589};
+					id=10;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=13;
+		class Item0
+		{
+			position[]={1670.446,5.5,5660.5088};
+			azimut=-166.58162;
+			id=11;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={1674.053,5.5,5675.2505};
+			azimut=-166.58162;
+			id=12;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.60000002;
+		};
+		class Item2
+		{
+			position[]={1686.04,5.5,5656.5098};
+			azimut=-166.58162;
+			id=13;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={1704.5897,5.5,5667.9102};
+			azimut=-168.07718;
+			id=14;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={1689.8182,5.5,5671.6167};
+			azimut=-166.58162;
+			id=15;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={1701.0824,5.5,5652.8198};
+			azimut=-166.58162;
+			id=16;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={1673.84,5.5,5653.3193};
+			azimut=-526.742;
+			offsetY=3;
+			id=17;
+			side="EMPTY";
+			vehicle="Sign_Arrow_Green_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={1677.7633,5.5,5668.2329};
+			azimut=-526.742;
+			offsetY=3;
+			id=18;
+			side="EMPTY";
+			vehicle="Sign_Arrow_Green_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={1693.0991,5.5,5664.4893};
+			azimut=-526.742;
+			offsetY=3;
+			id=19;
+			side="EMPTY";
+			vehicle="Sign_Arrow_Green_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item9
+		{
+			position[]={1707.8406,5.5,5660.5088};
+			azimut=-526.742;
+			offsetY=3;
+			id=20;
+			side="EMPTY";
+			vehicle="Sign_Arrow_Green_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item10
+		{
+			position[]={1704.2148,5.5,5645.5952};
+			azimut=-526.742;
+			offsetY=3;
+			id=21;
+			side="EMPTY";
+			vehicle="Sign_Arrow_Green_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item11
+		{
+			position[]={1689.6516,5.5,5649.5757};
+			azimut=-526.742;
+			offsetY=3;
+			id=22;
+			side="EMPTY";
+			vehicle="Sign_Arrow_Green_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item12
+		{
+			position[]={1656.8396,5.4361806,5651.1196};
+			azimut=-526.742;
+			offsetY=3;
+			id=23;
+			side="EMPTY";
+			vehicle="Sign_Arrow_Green_F";
+			leader=1;
+			skill=0.60000002;
+		};
+	};
+	class Markers
+	{
+		items=8;
+		class Item0
+		{
+			position[]={1669.9613,5.5,5659.9189};
+			name="VVS_car_1";
+			text="Car Depot";
+			type="c_car";
+			colorName="ColorBLUFOR";
+			angle=-80.254303;
+		};
+		class Item1
+		{
+			position[]={1673.5682,5.5,5674.6606};
+			name="VVS_air_1";
+			text="Air Depot";
+			type="c_air";
+			colorName="ColorBLUFOR";
+			angle=-80.254303;
+		};
+		class Item2
+		{
+			position[]={1685.5554,5.5,5655.9199};
+			name="VVS_tank_1";
+			text="Tank Depot";
+			type="b_armor";
+			colorName="ColorBLUFOR";
+			angle=-256.69299;
+		};
+		class Item3
+		{
+			position[]={1618.6982,-0.00061415916,5661.4785};
+			name="VVS_ship_1";
+			text="Ship Depot";
+			type="n_naval";
+			colorName="ColorBLUFOR";
+			angle=-73.751671;
+		};
+		class Item4
+		{
+			position[]={1704.3239,5.5,5667.8896};
+			name="VVS_all_1";
+			text="All";
+			type="hd_warning";
+			angle=15.128328;
+		};
+		class Item5
+		{
+			position[]={1689.4165,5.5,5671.5654};
+			name="VVS_Support_1";
+			text="Support Depot";
+			type="b_armor";
+			angle=-170.849;
+		};
+		class Item6
+		{
+			position[]={1700.9565,5.5,5653.1431};
+			name="VVS_Autonomous_1";
+			text="Autonomous Depot";
+			type="b_mech_inf";
+			angle=-256.69299;
+		};
+		class Item7
+		{
+			position[]={1680.7844,5.5,5635.0615};
+			name="BASE";
+			type="Empty";
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=11544751;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=16742576;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=13777092;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
